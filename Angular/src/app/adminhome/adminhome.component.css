@@ -1,0 +1,26 @@
+.jumbotron{
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/24/05/38/jet-2974131_960_720.jpg");
+    width: 85rem;
+    height: 40pc;
+    background-size: cover;
+}
+.card{
+    /* background-color: rgb(204, 157, 157); */
+    margin-top: 5px;
+    margin-left: 35px;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-right: 60px;
+    padding-bottom: 5px;
+}
+/* .card-body{
+    background-color: rgb(70, 106, 107);
+} */
+
+.card1{
+margin-left: 18rem;
+}
+
+.image{
+    height: 200px;
+}

@@ -1,0 +1,44 @@
+<div class="alert alert-success" *ngIf='success'>{{success}}</div>
+<div class="alert alert-danger" *ngIf='failure'>{{failure}}</div>
+<div class="container mt-3">
+  <table class="table table-bordered table-hover">
+    <thead style="background-color:cornsilk ;">
+      <tr>
+        <th>ScheduledF-Id</th>
+        <th>Flight Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Date</th>
+        <th>Arrival Time</th>
+        <th>Available Seats</th>
+          <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let schedu of schedules">
+        <td>{{schedu.scheduledFId}}</td>
+        <td>{{schedu.flightName}}</td>
+        <td>{{schedu.source}}</td>
+        <td>{{schedu.destination}}</td>
+        <td>{{schedu.departureDate}}</td>
+        <td>{{schedu.departureTime}}</td>
+        <td>{{schedu.arrivalDate}}</td>
+        <td>{{schedu.arrivalTime}}</td>
+        <td>{{schedu.availableSeats}}</td>
+          <td> <button class="btn btn-danger" (click)='deleteSchedule(flight)'>Delete</button> </td>
+
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
+
+
+
+
+

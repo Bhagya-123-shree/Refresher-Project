@@ -1,0 +1,149 @@
+<div class="jumbotron">
+
+    <div class="col-md-4 offset-md-4 mt-4">
+        <div class="card">
+            <div class="card-header">
+                <h2>Update Scheduled-Flight</h2>
+            </div>
+            <div class="card-body">
+                <form #updatedFli='ngForm' (ngSubmit)='updateFlight(updatedFli)'>
+                    <div class="form-group">
+                        <label for="scheduledFId">Scheduled-FlightId</label>
+                        <input type="text" name="scheduledFId" id="scheduledFId" #scheduledFId='ngModel'
+                            [(ngModel)]='scheduledFId1' class="form-control" placeholder="Enter Scheduled-FlightId" required>
+                        <div class="validationText"
+                            *ngIf=' scheduledFId.touched  && scheduledFId.invalid'>
+                            <div *ngIf='scheduledFId.errors.required'>
+                                *This field is mandatory
+                            </div>
+                           
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="flightName">Flight Name</label>
+                        <input type="text" name="flightName" id="flightName" #flightName='ngModel'
+                            [(ngModel)]='flightName1' class="form-control" required placeholder="Enter  flight Name"
+                            required>
+                        <div class="text-danger"
+                            *ngIf=' flightName.touched && flightName.invalid'>
+                            <div *ngIf='flightName.errors.required'>
+                                *This field is mandatory
+                            </div>
+                            
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="source">Source</label>
+                        <input type="text" name="source" id="source" #carrierName='ngModel'
+                            [(ngModel)]='source1' class="form-control" required placeholder="Enter Source">
+                        <div class="text-danger"
+                            *ngIf=' source.touched && source.invalid'>
+                            <div *ngIf='source.errors.required'>
+                                *This field is mandatory
+                            </div>
+                           
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" name="destination" id="destination" #destination='ngModel'
+                            [(ngModel)]='destination1' class="form-control" required placeholder="Enter destination">
+                        <div class="text-danger"
+                            *ngIf=' destination.touched && destination.invalid'>
+                            <div *ngIf='destination.errors.required'>
+                                *This field is mandatory
+                            </div>
+                            <div *ngIf='destination.errors.minlength'>
+                                *Enter Number mandatory
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departureDate">departure Date</label>
+                        <input type="date" name="departureDate" id="departureDate" #departureDate='ngModel'
+                            [(ngModel)]='departureDate1' class="form-control" required placeholder="Enter departureDate">
+                        <div class="text-danger"
+                            *ngIf=' departureDate.touched && departureDate.invalid'>
+                            <div *ngIf='departureDate.errors.required'>
+                                *This field is mandatory
+                            </div>
+                            <div *ngIf='departureDate.errors.minlength'>
+                                *Enter Number mandatory
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label for="departureTime">departure Time</label>
+                        <input type="time" name="departureTime" id="departureTime" #departureTime='ngModel'
+                            [(ngModel)]='departureTime1' class="form-control" required placeholder="Enter departure time">
+                        <div class="text-danger"
+                            *ngIf=' departureTime.touched && departureTime.invalid'>
+                            <div *ngIf='departureTime.errors.required'>
+                                *This field is mandatory
+                            </div>
+                            <div *ngIf='departureTime.errors.minlength'>
+                                *Enter Number mandatory
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrivalDate">arrival Date</label>
+                        <input type="date" name="arrivalDate" id="arrivalDate" #arrivalDate='ngModel'
+                            [(ngModel)]='arrivalDate1' class="form-control" required placeholder="Enter arrivalDate">
+                        <div class="text-danger"
+                            *ngIf='arrivalDate.touched && arrivalDate.invalid'>
+                            <div *ngIf='arrivalDate.errors.required'>
+                                *This field is mandatory
+                            </div>
+                           
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="arrivalTime">arrival Time</label>
+                        <input type="time" name="arrivalTime" id="arrivalTime" #arrivalTime='ngModel'
+                            [(ngModel)]='arrivalTime1' class="form-control" required placeholder="Enter arrivalTime">
+                        <div class="text-danger"
+                            *ngIf='arrivalTime.touched && arrivalTime.invalid'>
+                            <div *ngIf='arrivalTime.errors.required'>
+                                *This field is mandatory
+                            </div>
+                           
+                        </div>
+                    </div>
+                
+                    
+                      <div class="form-group">
+                        <label for="availableSeats">Available Seats</label>
+                        <input type="number" name="availableSeats" id="availableSeats" #availableSeats='ngModel'
+                            [(ngModel)]='availableSeats1' class="form-control" required placeholder="Enter availableSeats">
+                        <div class="text-danger"
+                            *ngIf=' availableSeats.touched && availableSeats.invalid'>
+                            <div *ngIf='availableSeats.errors.required'>
+                                *This field is mandatory
+                            </div>
+                           
+                        </div>
+                    </div>
+                
+                     
+
+
+                    <button type="sumbit" [disabled]='updatedFli.invalid' class="btn btn-outline-info">Update-Scheduleflight</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

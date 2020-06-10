@@ -1,0 +1,6 @@
+.jumbotron{
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/31/02/28/plane-2699241_960_720.jpg");
+    width: 90rem;
+    height: 40rem;
+    background-size: cover;
+}

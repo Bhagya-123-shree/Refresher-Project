@@ -1,0 +1,26 @@
+<div class="jumbotron">
+<div class="image">
+    <div class="card col-md-6 col-6 col-sm-6 col-lg-6 offset-3 mt-1">
+        <h1 style="text-align: center; font-family: monospace;">Registration Page</h1>
+
+        <form #register="ngForm" (ngSubmit)="registerForm(register)">
+         
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" #email="ngModel" ngModel required>
+              </div>
+        
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" class="form-control" #password="ngModel" ngModel required>
+              </div>
+              <div class=" form-group">
+                <label for="role"> Role</label>
+      
+                <input type="text" name="role" id="role" class="form-control" #role="ngModel" ngModel required >
+              </div>
+              <button class="btn btn-outline-primary" type="submit" [disabled]='register.invalid'>Register</button>
+       </form>
+    </div>
+</div>
+</div>

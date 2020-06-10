@@ -1,0 +1,7 @@
+.jumbotron{
+
+    background-image: url("https://as2.ftcdn.net/jpg/03/47/49/59/500_F_347495929_AHfZZAeBIo6xqD21h2K0NH63vLBuAuNB.jpg");
+    height: 900px ;
+    background-size: cover;
+    object-fit: cover;
+}

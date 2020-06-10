@@ -1,0 +1,52 @@
+<div class="jumbotron">
+  <div class="col-md-6 offset-3 mt-3">
+    <form #addFlightDetails="ngForm" (ngSubmit)="addScheduledFlight(addFlightDetails)">
+      
+      <div class="form-group">
+        <label for="scheduledFId">Flight Number:</label>
+        <input type="text" name="scheduledFId" id="scheduledFId" class="form-control" #scheduledFId="ngModel" ngModel required>
+      </div>
+
+      <div class="form-group">
+        <label for="flightName">Flight flightName:</label>
+        <input type="text" name="flightName" id="flightName" class="form-control" #flightName="ngModel" ngModel required>
+      </div>
+      <div class=" form-group">
+        <label for="source"> Source:</label>
+        <input type="text" name="source" id="source" class="form-control" #source="ngModel" ngModel required>
+      </div>
+      <div class=" form-group">
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" id="destination" class="form-control" #destination="ngModel" ngModel required>
+      </div>
+      <div class=" form-group">
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" name="departureDate" id="departureDate" class="form-control" #departureDate="ngModel" ngModel placeholder="dd/MM/yyyy" required>
+      </div>
+
+      <div class=" form-group">
+        <label for="departureTime">Departure Time:</label>
+        <input type="time" name="departureTime" id="departureTime" class="form-control" #departureTime="ngModel" ngModel required>
+      </div>
+
+      <div class=" form-group">
+        <label for="arrivalDate">Arrival Date:</label>
+        <input type="date" name="arrivalDate" id="arrivalDate" class="form-control" #arrivalDate="ngModel" ngModel placeholder="dd/MM/yyyy" required>
+      </div>
+
+      <div class=" form-group">
+        <label for="arrivalTime">Arrival Time:</label>
+        <input type="time" name="arrivalTime" id="arrivalTime" class="form-control" #arrivalTime="ngModel" ngModel required>
+      </div>
+
+      <div class=" form-group">
+        <label for="availableSeats">Available Seats:</label>
+        <input type="number" name="availableSeats" id="availableSeats" class="form-control" #availableSeats="ngModel" ngModel required>
+      </div>
+      <div class="btn-group float-right">
+        <button type="reset" class="btn btn-dark">Reset</button> &nbsp;
+        <button type="submit" class="btn btn-primary" [disabled]="addFlightDetails.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+.jumbotron{
+    background-image: url("https://cdn.pixabay.com/photo/2015/06/24/15/45/ipad-820272_960_720.jpg");
+    width: 90rem;
+    height: 40rem;
+    background-size: cover;
+}
